@@ -11,7 +11,7 @@
         <?php
             define("TABLA", 2);
             for ($i=0; $i <= 10 ; $i++) { 
-            echo("<li>".TABLA . " x " . $i ."=". TABLA* $i . "</li>");
+                echo("<li>".TABLA . " x " . $i ."=". TABLA* $i . "</li>");
             }
         ?> 
     </ul>
