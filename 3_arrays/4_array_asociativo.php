@@ -7,6 +7,10 @@ $agenda=[
 ];
 
 // echo($agenda["Sonia"]);
+foreach ($variable as $value) {
+    # code...
+}
+
 
 foreach ($agenda as $persona =>$telefono) {
     echo("<p>El número de $persona es $telefono </p>");
