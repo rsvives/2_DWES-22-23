@@ -52,3 +52,36 @@ echo(factorialCompleto(5));
 //Factorial recursivo:
 //función que devuelva el resultado del factorial,
 //pero calculado con una función recursiva
+
+$numero=5;
+
+function factorial_r($numero){
+    if($numero>1){
+        $resultado=$numero*factorial_r($numero-1);
+
+    }else{
+        $resultado=$numero;
+    }
+    return $resultado;
+};
+
+echo("El número es: ".$numero. "Y su factorial es: ".factorial_r($numero));
+echo("<br>");
+
+function factioral_r2($num){
+    if ($num ==1) {
+        return 1;
+    }else{
+        return $num * factioral_r2($num-1);
+    }
+}
+
+echo(factioral_r2(5));
+echo("<br>");
+
+function factorial_r3($num){
+    return $num==1?1:$num*factorial_r3($num-1);
+}
+
+echo("factorial ". factorial_r3(5));
+echo("<br>");
