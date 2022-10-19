@@ -12,7 +12,6 @@ function factorial($num){
 echo(factorial(5). "<br>");
 
 
-
 // echo 2**3;
 
 // $combinaciones = ((factorial(8))*(3**8)*(factorial(12))*(2**12))/12;
