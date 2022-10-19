@@ -24,6 +24,31 @@ print_r($doble);
 //crear un array de 3 personas
 // cada persona está compuesta por nombre y una edad
 
+$personas = [
+    ["nombre"=>"Juan","edad"=>18],
+    ["nombre"=>"Francisco","edad"=>19],
+    ["nombre"=>"Marta","edad"=>16],
+    ["nombre"=>"Maria","edad"=>15],
+    ["nombre"=>"José","edad"=>17],
+    ["nombre"=>"Chus","edad"=>21],
+];
+
+$estudiantes = array_map("addCiclo",$personas);
+
+function addCiclo($persona){
+    $persona["ciclo"] = "DAW";
+    return $persona;
+}
+
+//funcion menor de edad:
+//añade una clave "mayorEdad" = true si la edad es >= 18
+//añade una clave "mayorEdad" = false si la edad es < 18
+
+//modificar array de personas con dicha función (map)
+
+//sacar a los menores de edad con un filter
+
+
 
 
 
