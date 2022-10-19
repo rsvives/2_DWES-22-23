@@ -49,8 +49,19 @@ function addCiclo($persona){
 //sacar a los menores de edad con un filter
 
 
+function menorEdadMap ($persona){
+    if($persona["edad"]<18){
+        $persona["mayorEdad"] = "no";
+    }else{
+        $persona["mayorEdad"] = "si";
+    }
 
+    return $persona;
+    
+}
 
+$personas_mayores_menores = array_map("menorEdadMap",$personas);
 
+print_r($personas_mayores_menores);
 
 
