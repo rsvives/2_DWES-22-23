@@ -32,6 +32,19 @@ function encoder($texto, $offset){
     $texto_encoded = implode($array_encoded);
     return $texto_encoded;
 }
+function decoder($texto, $offset){
+    $array_caracteres = str_split($texto);
+
+    $array_encoded = array_map(fn($el)=>chr(ord($el)-$offset),$array_caracteres);
+    $texto_encoded = implode($array_encoded);
+    return $texto_encoded;
+}
 
 
-echo(encoder("hola mundo",5));
+$codificado=(encoder("hola mundo",5));
+
+echo "codificado: $codificado <br>";
+
+$decodificado=(decoder($codificado,5));
+
+echo "decodificado: $decodificado <br>";
