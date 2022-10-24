@@ -89,6 +89,9 @@
         return "Este objeto es un: " .get_class($this)." lado: $this->lado color: $this->color área: $this->area";
     }
 
+    public function saludar(){
+        echo "hola mundo!";
+    }
 
  }
 
@@ -97,5 +100,11 @@
 // echo $cuadrado1;
 
 echo"El lado es". $cuadrado1->getLado();
+echo "<br>";
 
+$cuadrado1->setLado(3);
 
+echo"El lado es". $cuadrado1->getLado();
+echo "<br>";
+
+$cuadrado1->saludar();
