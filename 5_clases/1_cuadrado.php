@@ -40,8 +40,6 @@
     public function setLado($lado)
     {
         $this->lado = $lado;
-
-        return $this;
     }
 
     /**
@@ -60,8 +58,6 @@
     public function setColor($color)
     {
         $this->color = $color;
-
-        return $this;
     }
 
     /**
@@ -80,8 +76,6 @@
     public function setArea($area)
     {
         $this->area = $area;
-
-        return $this;
     }
 
     function __toString()
