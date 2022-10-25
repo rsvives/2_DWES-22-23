@@ -77,3 +77,8 @@ $datos = [
     ["base"=>4,"altura"=>7],
     ["base"=>8,"altura"=>5],
 ];
+
+foreach ($datos as $key => $triangulo) {
+    array_push($triangulosArray,new Triangulo($triangulo["base"],$triangulo["altura"]));
+}
+print_r($triangulosArray);
