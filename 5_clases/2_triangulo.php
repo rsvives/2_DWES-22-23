@@ -85,5 +85,6 @@ print_r($triangulosArray);
 echo"<br>";
 echo"<br>";
 echo"<br>";
-
+$arrayFiltrado = array_filter($triangulosArray, fn($elem) => $elem -> getArea() > 10 ? true : false);
+var_dump($arrayFiltrado);
 
