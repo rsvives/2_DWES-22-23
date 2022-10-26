@@ -17,7 +17,7 @@
     private $color;
     private $area;
 
-    function __construct($lado,$color)
+    function __construct($lado=2,$color='rojo')
     {
         $this->lado = $lado;
         $this->color = $color;

@@ -82,3 +82,8 @@ foreach ($datos as $key => $triangulo) {
     array_push($triangulosArray,new Triangulo($triangulo["base"],$triangulo["altura"]));
 }
 print_r($triangulosArray);
+echo"<br>";
+echo"<br>";
+echo"<br>";
+
+
