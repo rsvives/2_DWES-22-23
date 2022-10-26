@@ -63,13 +63,16 @@
  
  }
 
-//  $triangulo1 = new Triangulo(2,3);
-
-//  echo($triangulo1);
+ //Crear una instancia, y cambiar la base
+ $triangulo1 = new Triangulo(2,3);
+ echo($triangulo1);
  
-//  $triangulo1->setBase(4);
+ $triangulo1->setBase(4);
+ echo($triangulo1);
 
-//  echo($triangulo1);
+//A partir de un array con datos, crear un conjunto de instancias de Triángulos
+//Añadir dichos objetos a un array
+
 
 $triangulosArray = [];
 $datos = [
@@ -83,8 +86,8 @@ foreach ($datos as $key => $triangulo) {
 }
 print_r($triangulosArray);
 echo"<br>";
-echo"<br>";
-echo"<br>";
+
+//Filtrar los objetos del array de triánculos cuyo área mayor que x
 $arrayFiltrado = array_filter($triangulosArray, fn($elem) => $elem -> getArea() > 10 ? true : false);
 var_dump($arrayFiltrado);
 
