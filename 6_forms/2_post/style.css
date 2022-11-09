@@ -1,0 +1,14 @@
+
+* {
+    background: #333;
+    color:white
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.error {
+    background-color: rgb(255, 100, 100);
+    color: rgb(67, 8, 8);
+    padding: 8px 12px;
+}

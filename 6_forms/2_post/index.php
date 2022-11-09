@@ -1,3 +1,11 @@
+<?php
+if(!empty($_GET["error"])){
+    $error = $_GET["error"];
+}else{
+    $error= false;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +13,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi formulario</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <form action="./form.php" method="post">
+    <form action="./controller.php" method="post">
+
+        <?php 
+            if($error){
+                echo('<p class="error">Error de credenciales ❌</p>');
+            }
+
+        ?>
+
         <label for="email">Email</label><br>
         <input type="email" id="email" name="email" ><br><br>
 
