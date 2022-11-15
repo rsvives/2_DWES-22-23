@@ -11,6 +11,18 @@ $juego=[
 
 $json = json_encode($juego,JSON_UNESCAPED_UNICODE);
 
+//leer json
+$jsonLeido = json_decode(file_get_contents("juego.json"),true,512,JSON_UNESCAPED_UNICODE);
+
+
+//guardar archivo .json
+if(file_put_contents("juego.json",$json)){
+    $mensaje = "se ha creado el json correctamente👌";
+}else{
+    $mensaje = "no se ha guardado el archivo ❌";
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +34,8 @@ $json = json_encode($juego,JSON_UNESCAPED_UNICODE);
     <title>Document</title>
 </head>
 <body>
-    <h1>Hola mundo</h1>
+    <h1>Página de subida de juegos en json</h1>
+    <p><?= $mensaje?></p>
     <script>
         let juego = <?= $json ?>;
         console.log(juego);
