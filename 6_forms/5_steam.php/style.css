@@ -66,3 +66,11 @@
 .formulario form * {
     width: 100%;
 }
+
+.j-content-center {
+    justify-content: center;
+}
+
+.j-content-center span {
+    text-align: center;
+}

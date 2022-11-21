@@ -10,7 +10,7 @@ if (!empty($_POST)) {
 
 file_put_contents("./juegos.json", json_encode($juegosArray, JSON_UNESCAPED_UNICODE));
 
-$vacio = $juegosArray == null ? true : false;
+$vacio = $juegosArray == [] ? true : false;
 ?>
 
 <!DOCTYPE html>
@@ -25,9 +25,9 @@ $vacio = $juegosArray == null ? true : false;
 </head>
 
 <body>
-    <div class="games-container">
+    <div class="games-container <?= $vacio ? 'j-content-center' : '' ?> ">
         <?php if ($vacio) { ?>
-            No hay juegos
+            <span>No hay juegos</span>
         <?php } else { ?>
             <?php foreach ($juegosArray as $key => $juego) { ?>
 
