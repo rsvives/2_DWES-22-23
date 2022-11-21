@@ -1,0 +1,68 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.games-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    padding: 12px;
+    min-height: 200px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    gap: 8px;
+}
+
+
+
+.game {
+
+    background-color: white;
+    padding: 12px;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+    border-radius: 4px;
+    display: flex;
+}
+
+.game-id {
+    font-size: 10px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.game-title {
+    margin-left: 12px;
+}
+
+.year {
+    margin-left: auto;
+    justify-self: flex-end;
+    font-size: 8px;
+}
+
+.button-submit {
+    padding: 8px 12px;
+    background-color: purple;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    padding: 12px;
+}
+
+.formulario form {
+    display: flex;
+    gap: 12px;
+    flex-direction: row;
+}
+
+.formulario form * {
+    width: 100%;
+}
