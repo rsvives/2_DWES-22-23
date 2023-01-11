@@ -3,13 +3,35 @@
 
 function cifrado($palabra, $offset)
 {
-    $abecedario = "abcdefghijklmnñopqrstuvwxyz";
-    for ($i = 0; $i < strlen($abecedario); $i++) {
-        if ($abecedario[$i] == "a") {
-            $resultado = $abecedario[$i + $offset];
+    $alfabeto = "abcdefghijklmnñopqrstuvwxyz";
+    $arrayAlfabeto = str_split($alfabeto);
+
+    $arrayLetras = str_split($palabra);
+    $palabraCifrada = "";
+
+    foreach ($arrayLetras as $letra) {
+        $posicionAlfabeto = null;
+
+        foreach ($arrayAlfabeto as $posicion => $letraABC) {
+            $letraCifrada = "";
+
+            if ($letra == $letraABC) {
+                $posicionAlfabeto = $posicion;
+                $nuevaPosicion = $posicionAlfabeto + $offset;
+
+                if ($nuevaPosicion > 27) {
+                    $nuevaPosicion -= 27;
+                }
+
+                $letraCifrada = $arrayAlfabeto[$nuevaPosicion];
+                $palabraCifrada .= $letraCifrada;
+
+                // echo $palabraCifrada . "<br>";
+            }
         }
+        // echo "letra: $letra   posición alfabeto: $posicionAlfabeto  nueva pos: $nuevaPosicion  nueva letra: $letraCifrada<br>";
     }
-    echo ($resultado);
+    return $palabraCifrada;
 }
 
-cifrado("", 4);
+echo cifrado("Hola mundo", 5);
