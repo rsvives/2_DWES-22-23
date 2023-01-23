@@ -20,7 +20,7 @@ try {
     $bd->commit();
 } catch (Exception $e) {
     try {
-        echo "Error haciendo rollback... error:" . $e->getMessage();
+        echo "Error en la transaccion, ejecutando rollback... error:" . $e->getMessage();
         $bd->rollBack();
     } catch (Exception $e2) {
         echo "El rollback ha fallado. Error: " . $e2->getMessage();
